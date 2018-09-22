@@ -3,13 +3,15 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh "javac java_helloworld/HelloWorld.java"
+                sh "pwd"
+                sh "javac HelloWorld.java"
                 
             }
         }
         stage('Test Run') { 
             steps {
-                sh "cd java_helloworld; java HelloWorld"
+                sh "pwd"
+                sh "java HelloWorld"
             }
         }
 
